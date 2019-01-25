@@ -1,0 +1,257 @@
+
+<!-- ALDO
+Notes:
+change the styling here:
+added this style to this OG div and id
+<div id='product-component-edd1b3e168a' style="margin-left:auto;margin-right:auto;margin-bottom:20px;"></div>
+
+
+change the color here:
+on the first 'button' instance... replace this
+
+
+"button": {
+	"background-color": "black",
+	"font-family": "monospace, sans-serif",
+	":hover": {
+		"background-color": "black"
+	},
+	":focus": {
+		"background-color": "#242424"
+	},
+	"font-weight": "normal"
+},
+
+
+
+
+replace type here:
+find and replace 'Cardana' for 'monospace'
+
+
+
+-->
+
+
+<div id='product-component-f4b5cc28b53' style="margin-left:auto;margin-right:auto;margin-bottom:20px;"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'studslife.myshopify.com',
+      apiKey: '7fe61954b54906be8b3163344b601aa3',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [816629252140],
+        node: document.getElementById('product-component-f4b5cc28b53'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "modal",
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": false,
+      "title": false,
+      "variantTitle": false,
+      "options": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "view product"
+    },
+    "styles": {
+      "product": {
+        "text-align": "left",
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+      	"background-color": "black",
+      	"font-family": "monospace, sans-serif",
+      	":hover": {
+      		"background-color": "black"
+      	},
+      	":focus": {
+      		"background-color": "#242424"
+      	},
+      	"font-weight": "normal"
+      },
+      "variantTitle": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "title": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal",
+        "font-size": "26px"
+      },
+      "description": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-family": "monospace, sans-serif",
+        "font-size": "18px",
+        "font-weight": "normal"
+      },
+      "compareAt": {
+        "font-size": "15px",
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "text": {
+      "title": "the haul (aka cart)",
+      "total": "subtotal",
+      "notice": "shipping and discount codes are added at checkout.",
+      "button": "proceed to checkout",
+      "empty": "add something"
+    },
+    "styles": {
+      "button": {
+        "background-color": "#7fbd51",
+        "font-family": "monospace, sans-serif",
+        ":hover": {
+          "background-color": "#72aa49"
+        },
+        ":focus": {
+          "background-color": "#72aa49"
+        },
+        "font-weight": "normal"
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "add to cart"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#7fbd51",
+        "font-family": "monospace, sans-serif",
+        ":hover": {
+          "background-color": "#72aa49"
+        },
+        ":focus": {
+          "background-color": "#72aa49"
+        },
+        "font-weight": "normal"
+      },
+      "variantTitle": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "title": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "description": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      },
+      "compareAt": {
+        "font-family": "monospace, sans-serif",
+        "font-weight": "normal"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "monospace, sans-serif",
+        "background-color": "#7fbd51",
+        ":hover": {
+          "background-color": "#72aa49"
+        },
+        ":focus": {
+          "background-color": "#72aa49"
+        },
+        "font-weight": "normal"
+      }
+    }
+  },
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "monospace, sans-serif"
+      },
+      "select": {
+        "font-family": "monospace, sans-serif"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
